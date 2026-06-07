@@ -59,6 +59,10 @@ class TestProcesamientoCompras(unittest.TestCase):
             resultado = pedir_opcion_ordenado()
 
         self.assertEqual(resultado, "N")
+    
+    def test_error_intencional_para_simular_pipeline_fallida(self):
+        resultado = numero_sucursal("SUC12")
+        self.assertEqual(resultado, 99)
 
 
 if __name__ == "__main__":
